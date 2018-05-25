@@ -1,0 +1,14 @@
+pragma solidity ^0.4.21;
+
+/**
+ * @title ITokenEventListener
+ * @dev Interface which should be implemented by token listener
+ */
+interface ITokenEventListener {
+    /**
+     * @dev Function is called after token transfer/transferFrom
+     * @param _from Sender address
+     * @param _value Amount of tokens
+     */
+    function onTokenTransfer(address _from, uint256 _value) external;
+}
